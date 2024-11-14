@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: hsl(0, 86%, 44%);
+  display: flex;
+  flex-direction: column; /* Ensure children stack vertically */
+}
+
+header {
+  color: #ffffff; /* White text for contrast on the header background */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(56, 44, 44, 0.2);
+  width: 100%;
+  background-color: #FF5733; /* Coral color for the header */
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto; /* Center the main content */
+  background-color: rgba(243, 237, 237, 0.59);
+}
+
+/* Link container styles */
+.link-container {
+  background-color: #009688; /* Teal color for link container */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px rgba(230, 225, 225, 0.15);
+  font-size: 1.5rem; /* Increase font size for better visibility */
+}
+
+.link-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link-container li {
+  margin: 0;
+  border-bottom: 1px solid #c47272;
+  font-weight: bold; /* Make link text bold */
+  color: #ffffff; /* White for better contrast */
+  font-size: 1.5rem; /* Increase font size */
+}
+
+.link-container li:last-child {
+  border-bottom: none;
+}
+
+.link-container button {
+  width: 100%;
+  background: none;
+  color: #ffffff; /* White text for button */
+  border: none;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  font-weight: bold; /* Make button text bold */
+  font-size: 1.5rem; /* Increase font size for buttons */
+}
+
+.link-container button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter on hover */
+}
+
+/* User and inventory management containers */
+.user-management-container,
+.inventory-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(233, 229, 229, 0.15);
+  margin: 20px 0;
+  background-color: #ffffff; /* White background for user management */
+}
+
+/* Enhanced input field styles with colors */
+.input-field {
+  padding: 12px;
+  border: 2px solid #009688; /* Teal border for input fields */
+  border-radius: 5px;
+  width: calc(100% - 24px);
+  margin-bottom: 15px;
+  font-size: 1.5rem; /* Increase font size for input fields */
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.input-field::placeholder {
+  color: hsl(0, 0%, 50%); /* Light gray for placeholder text */
+}
+
+.input-field:focus {
+  border-color: #FF5733; /* Coral border on focus */
+  box-shadow: 0 0 5px rgba(255, 87, 51, 0.5); /* Coral shadow on focus */
+  outline: none;
+  transform: scale(1.02); /* Slight scale-up effect */
+}
+
+/* Action buttons */
+.action-button,
+.edit-button,
+.delete-button {
+  background-color: #FF5733; /* Coral action color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 1.5rem; /* Increase font size for action buttons */
+}
+
+.action-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  background-color: #c74b29; /* Darker coral on hover */
+  transform: translateY(-1px); /* Slight lift effect on hover */
+}
+
+.action-button:focus,
+.edit-button:focus,
+.delete-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 87, 51, 0.5); /* Coral shadow on focus */
+}
+
+/* Product and user management styles */
+.product-list {
+  margin-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #cca7a7;
+}
+
+.product-name {
+  font-weight: bold;
+  color: #0f69a5;
+  font-size: 1.5rem; /* Increase product name font size */
+}
+
+.product-name:hover {
+  text-decoration: underline;
+}
+
+.delete-button {
+  background-color: #d12020; /* Red for delete button */
+}
+
+.delete-button:hover {
+  background-color: #d41d1d;
+}
+
+/* Table styles */
+table {
+  width: 100%; /* Ensures the table takes full width */
+  border-collapse: collapse; /* Remove spacing between cells */
+  margin-top: 20px; /* Add some space above tables */
+}
+
+th, td {
+  padding: 15px; /* Increased padding for better spacing */
+  text-align: left; /* Align text to the left */
+  border-bottom: 1px solid #ddd; /* Add a bottom border for clarity */
+  font-weight: bold; /* Make text bold */
+  font-size: 1.5rem; /* Increase font size */
+}
+
+th {
+  background-color: rgba(255, 87, 51, 0.1); /* Light coral background for header cells */
+}
+
+tr:hover {
+  background-color: rgba(76, 175, 80, 0.1); /* Highlight row on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .input-field,
+  .action-button,
+  .edit-button,
+  .delete-button {
+    width: 100%;
+  }
+}
+
+/* User management styles */
+.user-management-container h2,
+.user-management-container h3 {
+  color: #503232;
+  border-bottom: 2px solid #329732;
+  padding-bottom: 10px;
+  font-size: 1.5rem; /* Increase header font size */
+}
+
+.user-management-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-management-container li {
+  padding: 10px;
+  border-bottom: 1px solid #b37070;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+  font-weight: bold; /* Make user management text bold */
+  color: #4A4A4A; /* A deeper color */
+  font-size: 1.5rem; /* Increase font size */
+}
+
+.user-management-container li:hover {
+  background-color: rgba(248, 250, 248, 0.1);
+}
+
+/* Success and error messages */
+.user-management-container .success-message,
+.user-management-container .error-message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.success-message {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: #5cb85c;
+}
+
+.error-message {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #f5efef;
+}
